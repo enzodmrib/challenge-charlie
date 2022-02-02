@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, SearchBox, SearchInput } from './styles';
+import { Container, SearchBox, SearchInput, SearchButton } from './styles';
 
 const WeatherSearch: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const WeatherSearch: React.FC = () => {
     <h2>Search Weather for location</h2>
     <SearchBox>
         <SearchInput type="text" placeholder="Ex: Boston"></SearchInput>
-        <button className="search-button">Search</button>
+        <SearchButton>Search</SearchButton>
     </SearchBox>
   </Container>
   );

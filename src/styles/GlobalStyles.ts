@@ -17,4 +17,16 @@ export default createGlobalStyle`
         font-family: 'Roboto', sans-serif;
     }
 
+    body {
+        background-color: var(--light-pink);
+    }
+
+    :root {
+        --light-pink: #e3afbc;
+        --pink:#ee4c7d
+        --medium-pink: #9b1750;
+        --dark-pink: #5d001e;
+        --white: #e3e2df;
+    }
+
 `;
