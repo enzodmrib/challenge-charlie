@@ -8,18 +8,28 @@ export const Container = styled.div`
     flex-direction: column; 
 `;
 
-export const SearchBox = styled.div`
-    
+export const SearchText = styled.h1`
+    color: var(--white);
 `;
 
 export const SearchInput = styled.input`
-    background-color: white;
-    outline: none;
-    border-radius: 4px;
+    background-color: var(--white);  
 `;
 
 export const SearchButton = styled.button`
-    background-color: lightgray;
-    outline: none;
-    border-radius: 4px;
+    background-color: var(--dark-pink);
+    color: var(--white);
+`;
+
+export const SearchBox = styled.div`
+    height: 32px;
+    ${SearchInput}, ${SearchButton} {
+        outline: none;
+        border-radius: 4px;
+        margin: 4px;
+        height: 24px;
+        padding: 4px 4px;
+    }
+    display: flex;
+    align-items: center;
 `;

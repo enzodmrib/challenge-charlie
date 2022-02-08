@@ -1,8 +1,18 @@
 import React from 'react';
-import { Container } from './styles';
+import { AfterTomorrowWeatherInfo, Container, CurrentWeather, CurrentWeatherImg, CurrentWeatherInfo, InfoBox, Location, TomorrowWeatherInfo } from './styles';
 
 const WeatherInfoBox: React.FC = () => {
-  return <div />;
+  return <Container>
+    <InfoBox>
+      <Location>CurrentLocation</Location>
+      <CurrentWeather>
+        <CurrentWeatherImg></CurrentWeatherImg>
+        <CurrentWeatherInfo></CurrentWeatherInfo>
+      </CurrentWeather>
+      <TomorrowWeatherInfo></TomorrowWeatherInfo>
+      <AfterTomorrowWeatherInfo></AfterTomorrowWeatherInfo>
+    </InfoBox>
+  </Container>;
 }
 
 export default WeatherInfoBox;
