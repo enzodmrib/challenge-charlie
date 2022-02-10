@@ -1,13 +1,10 @@
-import React from 'react';
-import GlobalStyle from './styles/GlobalStyles';
-import WeatherSearch from './components/WeatherSearch/index';
-import WeatherInfoBox from './components/WeatherInfoBox';
+import Main from './components/Main';
+
 
 function App() {
   return (
     <>
-      <WeatherSearch/>
-      <GlobalStyle/>
+      <Main/>
     </>
   );
 }

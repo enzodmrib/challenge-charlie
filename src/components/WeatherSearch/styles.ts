@@ -10,6 +10,7 @@ export const Container = styled.div`
 
 export const SearchText = styled.h1`
     color: var(--white);
+    font-size: 96px;
 `;
 
 export const SearchInput = styled.input`
@@ -22,13 +23,14 @@ export const SearchButton = styled.button`
 `;
 
 export const SearchBox = styled.div`
-    height: 32px;
+    height: 96px;
     ${SearchInput}, ${SearchButton} {
+        font-size: 24px;
         outline: none;
-        border-radius: 4px;
-        margin: 4px;
-        height: 24px;
-        padding: 4px 4px;
+        border-radius: 12px;
+        margin: 12px;
+        height: 72px;
+        padding: 12px 12px;
     }
     display: flex;
     align-items: center;

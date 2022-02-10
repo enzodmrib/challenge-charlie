@@ -11,27 +11,32 @@ export const Container = styled.div`
 export const InfoBox = styled.div`
     height: 800px;
     width: 800px;
-    border: 1px solid black;
+    border: 4px solid var(--white);
+    border-radius: 12px;
 `;
 
 export const Location = styled.h1`
     text-align: center;
+    color: var(--white);
     font-size: 50px;
-    border-bottom: 1px solid black;
+    border-bottom: 4px solid var(--white);
 `;
 
 export const CurrentWeather = styled.div`
     height: 400px;
-    border-bottom: 1px solid black;
+    border-bottom: 4px solid var(--white);
 `;
 
 export const CurrentWeatherImg = styled.div`
     width: 50%;
     height: 100%;
+    border-right: 4px solid var(--white);
 `;
 
 export const CurrentWeatherInfo = styled.div`
-    
+    position: relative;
+    width: 50%;
+    height: 100%;
 `;
 
 export const TomorrowWeatherInfo = styled.div``;
