@@ -58,7 +58,7 @@ const Main: React.FC = () => {
             getWeatherData={getWeatherData}
             handleInputChange={handleInputChange}
         />
-        {weatherData && <WeatherInfoBox {...weatherData}/>}
+        {weatherData && <WeatherInfoBox mainWeatherData={weatherData.main}/>}
         <GlobalStyles />
     </>;
 }
