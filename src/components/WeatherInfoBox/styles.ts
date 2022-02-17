@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: var(--white);
+    h1, h2, p {
+        margin: 4px 0 4px 0;
+    }
 `;
 
 export const InfoBox = styled.div`
@@ -16,7 +18,8 @@ export const InfoBox = styled.div`
     border-radius: 12px;
 `;
 
-export const Location = styled.h1`
+export const Location = styled.div`
+    font-weight: bold; 
     text-align: center;
     background-color: var(--dark-pink);
     font-size: 50px;
@@ -55,10 +58,10 @@ export const CurrentWeatherInfo = styled.div`
 `;
 
 export const MaximumTemperature = styled.div`
-    border-bottom: 4px solid var(--white);
     height: 168px;
     padding: 32px;
     padding-left: 464px;
+    border-bottom: 4px solid var(--white);
     background-color: var(--medium-pink);
 `;
 

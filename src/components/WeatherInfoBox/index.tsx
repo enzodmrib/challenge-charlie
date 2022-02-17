@@ -4,10 +4,6 @@ import { Container, CurrentWeather, CurrentWeatherImg, CurrentWeatherImgContaine
 
 const WeatherInfoBox: React.FC<{ weatherData: IWeatherData, gifUrl: string }> = ({weatherData, gifUrl}) => {
 
-  const getWeatherGif = () => {
-    
-  }
-
   return <Container>
     <InfoBox>
       <Location>{weatherData.name}</Location>
@@ -25,11 +21,11 @@ const WeatherInfoBox: React.FC<{ weatherData: IWeatherData, gifUrl: string }> = 
         </CurrentWeatherInfo>
       </CurrentWeather>
       <MaximumTemperature>
-        <h1>MAXIMUM TEMPERATURE</h1>
+        <h2>MAXIMUM TEMPERATURE</h2>
         <h1>{weatherData.main.temp_max}°C</h1>
       </MaximumTemperature>
       <MinimumTemperature>
-        <h1>MINIMUM TEMPERATURE</h1>
+        <h2>MINIMUM TEMPERATURE</h2>
         <h1>{weatherData.main.temp_min}°C</h1>    
       </MinimumTemperature>
     </InfoBox>
