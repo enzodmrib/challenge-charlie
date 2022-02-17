@@ -6,6 +6,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: var(--white);
 `;
 
 export const InfoBox = styled.div`
@@ -17,28 +18,54 @@ export const InfoBox = styled.div`
 
 export const Location = styled.h1`
     text-align: center;
-    color: var(--white);
+    background-color: var(--dark-pink);
     font-size: 50px;
+    border-radius: 8px 8px 0 0;
     border-bottom: 4px solid var(--white);
 `;
 
 export const CurrentWeather = styled.div`
+    display: flex;
     height: 400px;
     border-bottom: 4px solid var(--white);
+    background-color: var(--white);
+    color: var(--dark-pink);
 `;
 
-export const CurrentWeatherImg = styled.div`
-    width: 50%;
-    height: 100%;
-    border-right: 4px solid var(--white);
+export const CurrentWeatherImgContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+`;
+
+export const CurrentWeatherImg = styled.img`
+    height: 300px;
+    width: 360px;
+    border-radius: 12px;
 `;
 
 export const CurrentWeatherInfo = styled.div`
-    position: relative;
-    width: 50%;
-    height: 100%;
+    padding: 32px;
+    padding-left: 64px;
+    border-left: 4px solid var(--white);
+    height: 400px;
+    width: 400px;
 `;
 
-export const TomorrowWeatherInfo = styled.div``;
+export const MaximumTemperature = styled.div`
+    border-bottom: 4px solid var(--white);
+    height: 168px;
+    padding: 32px;
+    padding-left: 464px;
+    background-color: var(--medium-pink);
+`;
 
-export const AfterTomorrowWeatherInfo = styled.div``;
+export const MinimumTemperature = styled.div`
+    height: 162px;
+    padding: 32px;
+    padding-left: 464px;
+    background-color: var(--pink);
+    border-radius: 0 0 12px 12px;
+`;

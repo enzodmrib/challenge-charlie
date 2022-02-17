@@ -1,18 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-`;
-
-export const SearchText = styled.h1`
-    color: var(--white);
-    font-size: 96px;
-`;
-
 export const SearchInput = styled.input`
     background-color: var(--white);  
 `;
