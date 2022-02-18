@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import WeatherSearch from '../WeatherSearch';
-import WeatherInfoBox from '../WeatherInfoBox';
-import GlobalStyles from '../../styles/GlobalStyles';
 import { IWeatherData } from '../../models/WeatherData';
 import axios from 'axios';
-import { Container, SearchText } from './styles';
+import WeatherSearch from '../WeatherSearch/index';
+import WeatherInfoBox from '../WeatherInfoBox';
 
 const Main: React.FC = () => {
     let [cityName, setCityName] = useState("");
@@ -47,7 +45,7 @@ const Main: React.FC = () => {
         try {
             //Axios is a promise-based HTTP Client for node.js and the browser
             const { data } = await axios.get<IWeatherData>(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=29e16138c1a63e3da37060cc1b72d0e0&units=metric`);
-
+            	
             const formattedWeatherDescription = data.weather[0].description.replaceAll(" ", "%20");
 
             const gifSearch = await axios.get(`https://api.giphy.com/v1/gifs/search?api_key=yAP9IuvqCzEIVLUMXHrjGNxpZm86LDvu&limit=1&q=${formattedWeatherDescription}`);
@@ -60,15 +58,13 @@ const Main: React.FC = () => {
     }
 
 
-    return <Container>
-        {!weatherData && <SearchText>Search Weather for location</SearchText>}
-        <WeatherSearch
-            getWeatherData={getWeatherData}
-            handleInputChange={handleInputChange}
-        />
-        {weatherData && <WeatherInfoBox weatherData={weatherData} gifUrl={gifUrl}/>}
-        <GlobalStyles />
-    </Container>;
+    return <div className="flex flex-col items-center justify-center h-screen w-screen bg-blue-300">
+        <div className="flex flex-col items-center justify-center">
+            {!weatherData && <h1 className="text-6xl font-bold text-blue-50">Search Weather for location</h1>}
+            <WeatherSearch getWeatherData={getWeatherData} handleInputChange={handleInputChange} />
+            {weatherData && <WeatherInfoBox weatherData={weatherData} gifUrl={gifUrl}/>}
+        </div>
+    </div>
 }
 
 export default Main;
