@@ -58,12 +58,12 @@ const Main: React.FC = () => {
     }
 
 
-    return <div className="flex flex-col items-center justify-center h-screen w-screen bg-blue-300">
+    return <div className="flex flex-col items-center justify-center h-screen w-screen subpixel-antialiased">
         <div className="flex flex-col items-center justify-center">
-            {!weatherData && <h1 className="text-6xl font-bold text-blue-50">Search Weather for location</h1>}
+            {!weatherData && <h1 className="text-6xl font-bold text-blue-50 drop-shadow-md">Search Weather for location</h1>}
             <WeatherSearch getWeatherData={getWeatherData} handleInputChange={handleInputChange} />
-            {weatherData && <WeatherInfoBox weatherData={weatherData} gifUrl={gifUrl}/>}
         </div>
+        {weatherData && <WeatherInfoBox weatherData={weatherData} gifUrl={gifUrl}/>}
     </div>
 }
 
